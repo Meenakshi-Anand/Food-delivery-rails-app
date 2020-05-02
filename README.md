@@ -1,4 +1,4 @@
-# Restaurants-Near Me
+# Food Delivery
 [Live]()
 [Design Documentation](https://github.com/Meenakshi-Anand/Restaurants-Near-Me/wiki)
 
