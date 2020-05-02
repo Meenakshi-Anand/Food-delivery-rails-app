@@ -24,4 +24,4 @@ Registered restaurants will be able to
 * Add or modify their menu.
 * Receive a notification when received an order.
 * Accept or cancel incoming orders.
-* Change the order status between (preparing/out for delivery/delivered)
+* Change their accepted order's status between (preparing/out for delivery/delivered).
