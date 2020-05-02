@@ -11,14 +11,14 @@ Restaurants Near Me is a full-stack web application built upon a Rails framework
 Users will be able to sign up for the application with a unique email id.
 Users with a valid account wii be able to  
 * Login and Logout of the application.
-* Browse for restaurants in a specific location
-* Select items from the menu and place order
+* Browse for restaurants that delivery to a specific location
+* Select items from the menu and place order, and make payment (to a user paypal account for now)
 * See the order status
-* Review the restaurant once order is delivered.
+* Review the order once it is delivered.
 
 ## Restaurants
 
-Restaurants will be able to register with the application to extend their services through the application.
+Restaurants will be able to register.
 Registered restaurants will be able to
 * Login and Logout of the application.
 * Add or modify their menu.
