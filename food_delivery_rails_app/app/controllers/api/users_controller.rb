@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  
   def create
 
    if params[:type] == "Restaurant"
@@ -33,7 +34,7 @@ class Api::UsersController < ApplicationController
    params.require(:user).permit(:name,:email,:password,
                               :contact_no)
  end
- 
+
  def address_params
    params.require(:user).permit(:line1,:line2,:city,:state,
                           :country,:zipcode)
