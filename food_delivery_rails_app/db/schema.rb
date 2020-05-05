@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_063513) do
+ActiveRecord::Schema.define(version: 2020_05_05_194748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,53 @@ ActiveRecord::Schema.define(version: 2020_05_05_063513) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
+  create_table "cart_items", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "food_item_id"
+    t.integer "quantity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["food_item_id"], name: "index_cart_items_on_food_item_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.bigint "consumer_id"
+    t.bigint "restaurant_id"
+    t.integer "order_status", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["consumer_id"], name: "index_carts_on_consumer_id"
+    t.index ["restaurant_id"], name: "index_carts_on_restaurant_id"
+  end
+
   create_table "consumers", force: :cascade do |t|
+  end
+
+  create_table "food_items", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.string "description"
+    t.bigint "restaurant_id"
+    t.index ["restaurant_id"], name: "index_food_items_on_restaurant_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.integer "status", default: 0, null: false
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.decimal "delivery_range"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "order_id"
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_reviews_on_order_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,9 +83,19 @@ ActiveRecord::Schema.define(version: 2020_05_05_063513) do
     t.bigint "entity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "contact_no"
+    t.bigint "contact_no"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["entity_type", "entity_id"], name: "index_users_on_entity_type_and_entity_id"
+  end
+
+  create_table "working_hours", force: :cascade do |t|
+    t.date "day", null: false
+    t.time "start_time", null: false
+    t.time "end_time", null: false
+    t.integer "status", default: 0, null: false
+    t.bigint "restaurant_id"
+    t.index ["day"], name: "index_working_hours_on_day", unique: true
+    t.index ["restaurant_id"], name: "index_working_hours_on_restaurant_id"
   end
 
 end

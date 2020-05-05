@@ -1,43 +1,24 @@
 class Api::UsersController < ApplicationController
-  
+
   def create
-
-   if params[:type] == "Restaurant"
-     @entity = Restaurant.new
-     type = "R"
-   else
-     @entity = Consumer.new
-     type = "C"
-   end
-
-   @user = User.new(user_params,entity_id: @entity.id,
-                entity_type: type)
-   if @user.save
-
-     @address = Address.new(address_params,user_id: @user.id)
-     if @address.save
-       login(@user)
-       render "api/users/show"
+   entity = params[:type] == "Restaurant" ? Restaurant.new : Consumer.new
+   entity.save
+   user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest],
+                   contact_no: params[:contact_no], entity_id: entity.id, entity_type: params[:type])
+   if user.save!
+     address = Address.new(line1: params[:line1],line2: params[:line2],city: params[:city],
+                          state: params[:state],country: params[:country],zipcode: params[:zipcode],
+                          user_id: user.id)
+     if address.save
+       render json: "Welcome to Food Delivery"
      else
-       render json: @address.errors.full_messages, status: 422
+       render json: address.errors.full_messages, status: 422
      end
 
    else
-     render json: @user.errors.full_messages, status: 422
+     render json: user.errors.full_messages, status: 422
    end
-
  end
 
- private
-
- def user_params
-   params.require(:user).permit(:name,:email,:password,
-                              :contact_no)
- end
-
- def address_params
-   params.require(:user).permit(:line1,:line2,:city,:state,
-                          :country,:zipcode)
- end
 
 end

@@ -1,0 +1,2 @@
+class WorkingHour < ApplicationRecord
+end
