@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_005528) do
+ActiveRecord::Schema.define(version: 2020_05_06_061457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,7 +73,11 @@ ActiveRecord::Schema.define(version: 2020_05_06_005528) do
   create_table "orders", force: :cascade do |t|
     t.bigint "cart_id"
     t.integer "status", default: 0, null: false
+    t.bigint "restaurant_id"
+    t.bigint "consumer_id"
     t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.index ["consumer_id"], name: "index_orders_on_consumer_id"
+    t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
