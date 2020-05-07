@@ -3,5 +3,5 @@ class Menu < ApplicationRecord
   enum status: ['breakfast','lunch','dinner']
   belongs_to :restaurant
   has_and_belongs_to_many :food_items
-  
+
 end

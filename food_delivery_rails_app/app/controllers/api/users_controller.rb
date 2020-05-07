@@ -1,9 +1,9 @@
 class Api::UsersController < ApplicationController
-
+  skip_before_action :authenticate
   def create
    entity = params[:type] == "Restaurant" ? Restaurant.new : Consumer.new
    entity.save
-   user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest],
+   user = User.new(name: params[:name], email: params[:email], password: params[:password],
                    contact_no: params[:contact_no], entity_id: entity.id, entity_type: params[:type])
    if user.save!
      address = Address.new(line1: params[:line1],line2: params[:line2],city: params[:city],
@@ -19,6 +19,4 @@ class Api::UsersController < ApplicationController
      render json: user.errors.full_messages, status: 422
    end
  end
-
-
 end
