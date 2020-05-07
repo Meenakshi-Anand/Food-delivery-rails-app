@@ -2383,3 +2383,966 @@ Processing by Api::FoodItemsController#create as JSON
 Completed 200 OK in 143ms (Views: 0.4ms | ActiveRecord: 59.4ms)
 
 
+Started POST "/api/user?name=Sachin&email=sachin@codeanand.com&password=[FILTERED]&type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 00:20:43 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sachin", "email"=>"sachin@codeanand.com", "password"=>"[FILTERED]", "type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (10.0ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 30.3ms)
+
+
+
+NameError - undefined local variable or method `entity' for #<Api::UsersController:0x00007f8fff9ca928>
+Did you mean?  @entity:
+  app/controllers/api/users_controller.rb:8:in `create'
+
+Started POST "/api/user?name=Sachin&email=sachin@codeanand.com&password=[FILTERED]&type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 00:21:27 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sachin", "email"=>"sachin@codeanand.com", "password"=>"[FILTERED]", "type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (0.3ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (5.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sachin@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Load (2.6ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sachin"], ["email", "sachin@codeanand.com"], ["password_digest", "$2a$12$iqNGbB659lRC9.oWW3QH8u8MT2SyfAH1aAHSKaqHapo6nK5O71qAS"], ["entity_type", "Consumer"], ["entity_id", 11], ["created_at", "2020-05-07 07:21:27.560830"], ["updated_at", "2020-05-07 07:21:27.560830"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Completed 500 Internal Server Error in 784ms (ActiveRecord: 28.7ms)
+
+
+
+NameError - undefined local variable or method `user' for #<Api::UsersController:0x00007f8ffc718200>
+Did you mean?  @user:
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/user?name=SachinA&email=sachina@codeanand.com&password=[FILTERED]&type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 00:21:58 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"SachinA", "email"=>"sachina@codeanand.com", "password"=>"[FILTERED]", "type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (0.5ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sachina@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "SachinA"], ["email", "sachina@codeanand.com"], ["password_digest", "$2a$12$8IDXzBzXJOqfATC8m9DDHePGMP5zBRBVk9jey0T9Xj9F0PZh8xqyG"], ["entity_type", "Consumer"], ["entity_id", 12], ["created_at", "2020-05-07 07:21:59.421749"], ["updated_at", "2020-05-07 07:21:59.421749"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mAddress Create (3.4ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["line1", "778,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 10]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 573ms (Views: 40.7ms | ActiveRecord: 30.3ms)
+
+
+Started POST "/api/user?name=SachinAh&email=sachinah@codeanand.com&password=[FILTERED]&type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 00:23:02 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"SachinAh", "email"=>"sachinah@codeanand.com", "password"=>"[FILTERED]", "type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (1.1ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sachinah@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Load (0.9ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "SachinAh"], ["email", "sachinah@codeanand.com"], ["password_digest", "$2a$12$HyLJaiYuygF2gY0Ofm0LkuiGkPstE.B9VAWDcIg2DhbepKrkguONa"], ["entity_type", "Consumer"], ["entity_id", 13], ["created_at", "2020-05-07 07:23:03.488407"], ["updated_at", "2020-05-07 07:23:03.488407"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mAddress Create (0.6ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["line1", "778,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 11]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 515ms (Views: 17.6ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:29:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 510ms (ActiveRecord: 37.2ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/meenakshianand/Desktop/Food-delivery-rails-app/food_delivery_rails_app/app/views"
+:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:31:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.1ms)
+Completed 200 OK in 502ms (Views: 13.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:32:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (8.9ms)
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 0.7ms)
+
+
+
+ActionView::Template::Error - undefined method `jwt' for #<String:0x00007f8ffba14108>:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:32:59 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.8ms)
+Completed 200 OK in 453ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:34:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (5.5ms)
+Completed 500 Internal Server Error in 423ms (ActiveRecord: 0.7ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+  "jwt" : @jwt
+        ^
+/Users/meenakshianand/Desktop/Food-delivery-rails-app/food_delivery_rails_app/app/views/api/sessions/show.json.jbuilder:7: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/sessions/show.json.jbuilder:3:in `'
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:34:56 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.0ms)
+Completed 200 OK in 441ms (Views: 15.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:36:04 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.8ms)
+Completed 200 OK in 497ms (Views: 27.1ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:37:35 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (2.9ms)
+Completed 200 OK in 500ms (Views: 31.7ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:38:01 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.8ms)
+Completed 200 OK in 422ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:38:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.3ms)
+Completed 200 OK in 462ms (Views: 22.7ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:39:12 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.9ms)
+Completed 200 OK in 442ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:39:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (4.5ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 0.8ms)
+
+
+
+SyntaxError - syntax error, unexpected tIVAR, expecting '('
+  json. @jwt
+        ^~~~:
+  app/views/api/sessions/show.json.jbuilder:3:in `'
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:39:43 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.9ms)
+Completed 200 OK in 444ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:39:56 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.8ms)
+Completed 200 OK in 450ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:40:21 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (8.1ms)
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - undefined method `extract!' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:40:45 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (4.4ms)
+Completed 500 Internal Server Error in 416ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - undefined method `jwt' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:41:03 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.5ms)
+Completed 200 OK in 521ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:41:33 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.3ms)
+Completed 200 OK in 431ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:42:01 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.9ms)
+Completed 200 OK in 501ms (Views: 6.4ms | ActiveRecord: 65.3ms)
+
+
+Started POST "/api/session?email=shivanig@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-07 00:42:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.2ms)
+Completed 200 OK in 404ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/api//api/user/update_contact_number?contact_no=90909090" for ::1 at 2020-05-07 00:44:32 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"90909090"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mRestaurant Load (1.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mUser Update (13.3ms)[0m  [1m[33mUPDATE "users" SET "contact_no" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["contact_no", 90909090], ["updated_at", "2020-05-07 07:44:32.640065"], ["id", 8]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 37.0ms)
+
+
+
+ActionView::Template::Error - undefined method `line1' for nil:NilClass:
+  app/controllers/api/users_controller.rb:32:in `update_contact_number'
+
+Started PATCH "/api//api/user/update_contact_number?contact_no=90909090" for ::1 at 2020-05-07 00:45:13 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"90909090"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.5ms)
+
+
+
+ActionView::Template::Error - undefined method `line1' for nil:NilClass:
+  app/controllers/api/users_controller.rb:32:in `update_contact_number'
+
+Started PATCH "/api//api/user/update_contact_number?contact_no=90909090" for ::1 at 2020-05-07 00:46:21 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"90909090"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 25ms (Views: 12.4ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/api//api/user/update_contact_number?contact_no=90909090" for ::1 at 2020-05-07 00:46:53 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"90909090"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:31
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 27ms (Views: 16.2ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 00:51:33 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (3.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:45
+Completed 400 Bad Request in 242ms (Views: 0.6ms | ActiveRecord: 61.4ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 00:56:03 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Unpermitted parameters: :line1, :format
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:46
+Completed 400 Bad Request in 161ms (Views: 0.8ms | ActiveRecord: 50.7ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 00:58:02 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Unpermitted parameters: :line1, :format
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:46
+Completed 400 Bad Request in 70ms (Views: 0.4ms | ActiveRecord: 18.8ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 00:59:36 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[36mAddress Update (13.8ms)[0m  [1m[33mUPDATE "addresses" SET "line1" = $1 WHERE "addresses"."id" = $2[0m  [["line1", "765,praderia mt"], ["id", 7]]
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:45
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 34.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template address/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/meenakshianand/Desktop/Food-delivery-rails-app/food_delivery_rails_app/app/views"
+:
+  app/controllers/api/users_controller.rb:46:in `update_address'
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 01:00:19 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:45
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 17.3ms)
+
+
+
+ActionView::MissingTemplate - Missing template apiaddress/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/meenakshianand/Desktop/Food-delivery-rails-app/food_delivery_rails_app/app/views"
+:
+  app/controllers/api/users_controller.rb:46:in `update_address'
+
+Started PATCH "/api//api/user/update_address?line1=765,praderia%20mt" for ::1 at 2020-05-07 01:00:28 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"765,praderia mt"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  Rendering api/address/show.json.jbuilder
+  Rendered api/address/show.json.jbuilder (1.8ms)
+Completed 200 OK in 69ms (Views: 6.5ms | ActiveRecord: 16.9ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=no%20line%203" for ::1 at 2020-05-07 01:01:10 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"no line 3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[36mAddress Update (0.8ms)[0m  [1m[33mUPDATE "addresses" SET "line1" = $1 WHERE "addresses"."id" = $2[0m  [["line1", "no line 3"], ["id", 7]]
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  Rendering api/address/show.json.jbuilder
+  Rendered api/address/show.json.jbuilder (0.9ms)
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/api//api/user/update_address?line1=no%20line%208" for ::1 at 2020-05-07 01:01:18 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"no line 8"}
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+Unpermitted parameter: :format
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[36mAddress Update (0.7ms)[0m  [1m[33mUPDATE "addresses" SET "line1" = $1 WHERE "addresses"."id" = $2[0m  [["line1", "no line 8"], ["id", 7]]
+  ↳ app/controllers/api/users_controller.rb:45
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:45
+  Rendering api/address/show.json.jbuilder
+  Rendered api/address/show.json.jbuilder (1.0ms)
+Completed 200 OK in 49ms (Views: 4.7ms | ActiveRecord: 35.4ms)
+
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:05:39 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sac", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (6.6ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Unpermitted parameters: :type, :line1, :city, :state, :country, :zipcode, :format
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 15.4ms)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 0..1):
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:06:06 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sac", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (0.4ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.2ms)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 0..1):
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:06:15 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sac", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (1.9ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 3.2ms)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 0..1):
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:07:10 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sac", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (0.7ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 29.4ms)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 0..1):
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:07:43 -0700
+
+SyntaxError - syntax error, unexpected ')', expecting =>
+...ity_id: @entity.id,user_params)
+...                              ^:
+  app/controllers/api/users_controller.rb:7:in `'
+
+Started POST "/api/user?name=Sac&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-07 01:10:50 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Sac", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mConsumer Create (8.2ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "veena@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Load (1.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sac"], ["email", "veena@codeanand.com"], ["password_digest", "$2a$12$TmSPZkNbs5jCYqkynfS9I.8n79e4IY17qR8Qumb5dOfZE5qJhVfNi"], ["entity_type", "Consumer"], ["entity_id", 18], ["created_at", "2020-05-07 08:10:51.182480"], ["updated_at", "2020-05-07 08:10:51.182480"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mAddress Create (1.1ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["line1", "778,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 12]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 550ms (Views: 25.9ms | ActiveRecord: 45.8ms)
+
+
+Started DELETE "/api//api/user" for ::1 at 2020-05-07 01:17:31 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/api/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/user" for ::1 at 2020-05-07 01:17:48 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:18:17 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 94ms (Views: 1.3ms | ActiveRecord: 53.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:25 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 30ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:28 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:29 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:40 -0700
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:51 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:20:59 -0700
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-07 01:21:32 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/user/update_address?line1=809%20pre%20cir%20mount" for ::1 at 2020-05-07 01:23:42 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/user/update_address"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/api/user/update_address?line1=809%20pre%20cir%20mount" for ::1 at 2020-05-07 01:23:57 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/user/update_address"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/api/user/update_address?line1=809%20pre%20cir%20mount" for ::1 at 2020-05-07 01:24:58 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/user/update_address"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/api/user/update_address?line1=809%20pre%20cir%20mount" for ::1 at 2020-05-07 01:25:25 -0700
+Processing by Api::UsersController#update_address as JSON
+  Parameters: {"line1"=>"809 pre cir mount"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mAddress Load (4.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:42
+Unpermitted parameter: :format
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:44
+  [1m[36mAddress Update (7.9ms)[0m  [1m[33mUPDATE "addresses" SET "line1" = $1 WHERE "addresses"."id" = $2[0m  [["line1", "809 pre cir mount"], ["id", 7]]
+  ↳ app/controllers/api/users_controller.rb:44
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/address/show.json.jbuilder
+  Rendered api/address/show.json.jbuilder (1.7ms)
+Completed 200 OK in 179ms (Views: 4.8ms | ActiveRecord: 94.5ms)
+
+
+Started PATCH "/api/user/update_contact_number?contact_no=90909090" for ::1 at 2020-05-07 01:25:51 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"90909090"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mRestaurant Load (2.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 59ms (Views: 5.0ms | ActiveRecord: 16.0ms)
+
+
+Started PATCH "/api/user/update_contact_number?contact_no=00000000" for ::1 at 2020-05-07 01:26:09 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"00000000"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "contact_no" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["contact_no", 0], ["updated_at", "2020-05-07 08:26:09.568975"], ["id", 8]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 16ms (Views: 4.8ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/api/user/update_contact_number?contact_no=123456789" for ::1 at 2020-05-07 01:26:33 -0700
+Processing by Api::UsersController#update_contact_number as JSON
+  Parameters: {"contact_no"=>"123456789"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shivanig@codeanand.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "contact_no" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["contact_no", 123456789], ["updated_at", "2020-05-07 08:26:33.566280"], ["id", 8]]
+  ↳ app/controllers/api/users_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 3.9ms)
+
+
