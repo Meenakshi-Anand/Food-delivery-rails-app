@@ -26,7 +26,7 @@ class Api::RestaurantsController < ApplicationController
 
   def set_menu
     @user = current_user
-    if @user.entity_type == "Restaurant" && @user.entity_id == params[:id]
+    if @user.entity_type == "Restaurant" && @user.entity_id == params[:id].to_i
        @restaurant = Restaurant.find(params[:id])
       if @restaurant
         @menu = @restaurant.get_menu_of_category(params[:meal_category])

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     post   'restaurant/:id/set_menu' , to: 'restaurants#set_menu'
     post   'restaurant/update_delivery_range' , to: 'restaurants#update_delivery_range'
     get    'user/delivering_restaurants' , to: 'users#get_delivering_restaurants'
+    post   'restaurant/:id/cart' , to: 'carts#create'
+    post   'restaurant/:id/cart/:cart_id/order' , to: 'orders#create'
     resource :session, only: [:create, :destroy,:show]
     resources :food_items
   end
