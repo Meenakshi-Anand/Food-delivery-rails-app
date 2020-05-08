@@ -6655,3 +6655,172 @@ Processing by Api::CartsController#update_cart_status as JSON
 Completed 422 Unprocessable Entity in 16ms (Views: 0.4ms | ActiveRecord: 11.3ms)
 
 
+Started POST "/api/restaurant/13/cart/2/order/5/review?description=good%20job" for ::1 at 2020-05-08 03:09:42 -0700
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"description"=>"good job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/restaurant/13/cart/2/order/5/review?description=good%20job" for ::1 at 2020-05-08 03:11:00 -0700
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"description"=>"good job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 422 Unprocessable Entity in 141ms (Views: 0.3ms | ActiveRecord: 62.4ms)
+
+
+Started POST "/api/session?email=abhi@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 03:11:17 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"abhi@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.4ms)
+Completed 200 OK in 436ms (Views: 6.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/restaurant/13/cart/2/order/5/review?description=good%20job" for ::1 at 2020-05-08 03:11:41 -0700
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"description"=>"good job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 20ms (Views: 1.3ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/api/restaurant/13/cart/2/order/5/review?description=good%20job" for ::1 at 2020-05-08 03:12:05 -0700
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"description"=>"good job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[36mOrder Load (4.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[36mReview Create (24.5ms)[0m  [1m[32mINSERT INTO "reviews" ("order_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["order_id", 5], ["description", "good job"], ["created_at", "2020-05-08 10:12:05.772392"], ["updated_at", "2020-05-08 10:12:05.772392"]]
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:4
+Completed 200 OK in 119ms (Views: 2.2ms | ActiveRecord: 56.0ms)
+
+
+Started DELETE "/api/restaurant/13/cart/2/order/5/review/1" for ::1 at 2020-05-08 03:13:10 -0700
+Processing by Api::ReviewsController#destroy as JSON
+  Parameters: {"id"=>"13", "cart_id"=>"2", "order_id"=>"5", "review_id"=>"1"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/restaurant/13/cart/2/order/5/review/1" for ::1 at 2020-05-08 03:13:45 -0700
+Processing by Api::ReviewsController#destroy as JSON
+  Parameters: {"id"=>"13", "cart_id"=>"2", "order_id"=>"5", "review_id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:13
+  [1m[36mReview Destroy (2.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:13
+No template found for Api::ReviewsController#destroy, rendering head :no_content
+Completed 204 No Content in 202ms (ActiveRecord: 7.2ms)
+
+
+Started POST "/api/restaurant/13/cart/2/order/5/review?description=good%20job" for ::1 at 2020-05-08 03:18:18 -0700
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"description"=>"good job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[36mReview Create (10.0ms)[0m  [1m[32mINSERT INTO "reviews" ("order_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["order_id", 5], ["description", "good job"], ["created_at", "2020-05-08 10:18:18.477350"], ["updated_at", "2020-05-08 10:18:18.477350"]]
+  ↳ app/controllers/api/reviews_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:4
+Completed 200 OK in 147ms (Views: 2.0ms | ActiveRecord: 57.7ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5/review/2?description=bad%20job" for ::1 at 2020-05-08 03:18:48 -0700
+
+AbstractController::ActionNotFound - The action 'update' could not be found for Api::ReviewsController:
+
+Started PATCH "/api/restaurant/13/cart/2/order/5/review/2?description=bad%20job" for ::1 at 2020-05-08 03:19:11 -0700
+Processing by Api::ReviewsController#update as JSON
+  Parameters: {"description"=>"bad job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5", "review_id"=>"2"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5/review/2?description=bad%20job" for ::1 at 2020-05-08 03:19:19 -0700
+Processing by Api::ReviewsController#update as JSON
+  Parameters: {"description"=>"bad job", "id"=>"13", "cart_id"=>"2", "order_id"=>"5", "review_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:13
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:13
+  [1m[36mReview Update (4.3ms)[0m  [1m[33mUPDATE "reviews" SET "description" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["description", "bad job"], ["updated_at", "2020-05-08 10:19:19.619300"], ["id", 2]]
+  ↳ app/controllers/api/reviews_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:13
+Completed 200 OK in 146ms (Views: 0.6ms | ActiveRecord: 36.8ms)
+
+
+Started POST "/api/user?name=Shivani&email=shivanig@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=756,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 09:10:41 -0700
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Shivani", "email"=>"shivanig@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"756,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (4.8ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivanig@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (1.0ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (4.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Shivani"], ["email", "shivanig@codeanand.com"], ["password_digest", "$2a$12$VgJOT4O19jjhIH65ATxXdOdzN6gPjX9Yte30ld/e90B1qH5lH3v06"], ["entity_type", "Consumer"], ["entity_id", 24], ["created_at", "2020-05-08 16:10:43.028171"], ["updated_at", "2020-05-08 16:10:43.028171"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (1.8ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "756,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 20], ["latitude", 37.5196975], ["longitude", -121.9239206]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 1251ms (Views: 33.6ms | ActiveRecord: 66.0ms)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (4.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+  [1m[36mAddress Load (14.9ms)[0m  [1m[34mSELECT addresses.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196975 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196975 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239206 - addresses.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((addresses.longitude - -121.9239206) / 57.2957795), ((addresses.latitude - 37.5196975) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "addresses" WHERE (addresses.latitude BETWEEN 37.4477517715265 AND 37.5916432284735 AND addresses.longitude BETWEEN -122.01463014026156 AND -121.83321105973845 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196975 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196975 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239206 - addresses.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 8 AND addresses.id != 24) ORDER BY distance ASC[0m

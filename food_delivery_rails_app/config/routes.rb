@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     post   'restaurant/:id/cart/:cart_id/order' , to: 'orders#create'
     patch  'restaurant/:id/cart/:cart_id/cart_status', to: 'carts#update_cart_status'
     patch  'restaurant/:id/cart/:cart_id/order/:order_id', to: 'orders#update_order_status'
+    post   'restaurant/:id/cart/:cart_id/order/:order_id/review' , to: 'reviews#create'
+    delete 'restaurant/:id/cart/:cart_id/order/:order_id/review/:review_id' , to: 'reviews#destroy'
+    patch 'restaurant/:id/cart/:cart_id/order/:order_id/review/:review_id' , to: 'reviews#update'
     resource :session, only: [:create, :destroy,:show]
     resources :food_items
   end
