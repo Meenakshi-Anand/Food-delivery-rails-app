@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get    'user/delivering_restaurants' , to: 'users#get_delivering_restaurants'
     post   'restaurant/:id/cart' , to: 'carts#create'
     post   'restaurant/:id/cart/:cart_id/order' , to: 'orders#create'
+    patch  'restaurant/:id/cart/:cart_id/cart_status', to: 'carts#update_cart_status'
+    patch  'restaurant/:id/cart/:cart_id/order/:order_id', to: 'orders#update_order_status'
     resource :session, only: [:create, :destroy,:show]
     resources :food_items
   end

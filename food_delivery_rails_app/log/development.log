@@ -6101,3 +6101,557 @@ Processing by Api::OrdersController#create as JSON
 Completed 200 OK in 72ms (Views: 2.0ms | ActiveRecord: 12.7ms)
 
 
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:34:15 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (4.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (2.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 422 Unprocessable Entity in 618ms (ActiveRecord: 150.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Order status can't be blank:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:34:55 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (2.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (0.9ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 422 Unprocessable Entity in 351ms (ActiveRecord: 85.3ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Order status can't be blank:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:35:33 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (1.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (2.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 422 Unprocessable Entity in 319ms (ActiveRecord: 77.7ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Order status can't be blank:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:36:03 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (1.0ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 422 Unprocessable Entity in 560ms (ActiveRecord: 88.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Order status can't be blank:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:37:18 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (0.5ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 422 Unprocessable Entity in 141ms (ActiveRecord: 44.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Order status can't be blank:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started POST "/api/session?email=abhi@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 02:39:42 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"abhi@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.6ms)
+Completed 200 OK in 524ms (Views: 7.2ms | ActiveRecord: 17.3ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:40:01 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+Completed 422 Unprocessable Entity in 56ms (Views: 0.3ms | ActiveRecord: 13.2ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:40:17 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session?email=anand@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 02:40:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"anand@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anand@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.9ms)
+Completed 200 OK in 414ms (Views: 10.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:40:54 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mCart Update (11.9ms)[0m  [1m[33mUPDATE "carts" SET "order_status" = $1, "updated_at" = $2 WHERE "carts"."id" = $3[0m  [["order_status", 2], ["updated_at", "2020-05-08 09:40:54.922459"], ["id", 2]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 500 Internal Server Error in 117ms (Views: 1.2ms | ActiveRecord: 30.3ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:41:38 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+Completed 500 Internal Server Error in 100ms (Views: 0.7ms | ActiveRecord: 29.9ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:42:02 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[36mConsumer Load (0.5ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[36mOrder Create (8.6ms)[0m  [1m[32mINSERT INTO "orders" ("cart_id", "restaurant_id", "consumer_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cart_id", 2], ["restaurant_id", 13], ["consumer_id", 17]]
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:29
+Completed 500 Internal Server Error in 144ms (Views: 0.4ms | ActiveRecord: 46.1ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=out_for_delivery" for ::1 at 2020-05-08 02:45:49 -0700
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/orders_controller.rb:25:in `'
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=out_for_delivery" for ::1 at 2020-05-08 02:46:31 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"out_for_delivery", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mConsumer Load (0.9ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:19
+Completed 422 Unprocessable Entity in 267ms (ActiveRecord: 139.7ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Status can't be blank:
+  app/controllers/api/orders_controller.rb:19:in `update_order_status'
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=out_for_delivery" for ::1 at 2020-05-08 02:47:46 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"out_for_delivery", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:19
+Completed 422 Unprocessable Entity in 73ms (ActiveRecord: 3.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Status can't be blank:
+  app/controllers/api/orders_controller.rb:19:in `update_order_status'
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=out_for_delivery" for ::1 at 2020-05-08 02:48:25 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"out_for_delivery", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 422 Unprocessable Entity in 131ms (ActiveRecord: 35.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Status can't be blank:
+  app/controllers/api/orders_controller.rb:20:in `update_order_status'
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=2" for ::1 at 2020-05-08 02:49:04 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"2", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (2.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.8ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (7.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 422 Unprocessable Entity in 36ms (ActiveRecord: 17.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Status can't be blank:
+  app/controllers/api/orders_controller.rb:20:in `update_order_status'
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=2" for ::1 at 2020-05-08 02:50:08 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"2", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.5ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 124ms (Views: 1.5ms | ActiveRecord: 36.8ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=out_for_delivery" for ::1 at 2020-05-08 02:50:33 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"out_for_delivery", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 20ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=2" for ::1 at 2020-05-08 02:50:53 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"2", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 32ms (Views: 1.0ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=1" for ::1 at 2020-05-08 02:50:58 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"1", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (25.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 46ms (Views: 0.4ms | ActiveRecord: 27.2ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status%20=preparing" for ::1 at 2020-05-08 02:51:07 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status "=>"preparing", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.6ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 25ms (Views: 0.4ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status=preparing" for ::1 at 2020-05-08 02:51:38 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status"=>"preparing", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.8ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 20ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/order/5?status=delivered" for ::1 at 2020-05-08 02:51:52 -0700
+Processing by Api::OrdersController#update_order_status as JSON
+  Parameters: {"status"=>"delivered", "id"=>"13", "cart_id"=>"2", "order_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mConsumer Load (0.3ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mRestaurant Load (8.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[36mOrder Update (7.6ms)[0m  [1m[33mUPDATE "orders" SET "status" = $1 WHERE "orders"."id" = $2[0m  [["status", 2], ["id", 5]]
+  ↳ app/controllers/api/orders_controller.rb:20
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/orders_controller.rb:20
+Completed 500 Internal Server Error in 43ms (Views: 0.4ms | ActiveRecord: 19.8ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_denied" for ::1 at 2020-05-08 02:57:43 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_denied", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (2.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:25
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 39.8ms)
+
+
+
+NoMethodError - undefined method `status' for #<Cart:0x00007f835cb30920>:
+  app/controllers/api/carts_controller.rb:26:in `update_cart_status'
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_denied" for ::1 at 2020-05-08 02:58:58 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_denied", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/carts_controller.rb:27
+  [1m[36mConsumer Load (1.5ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:27
+  [1m[36mRestaurant Load (1.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:27
+  [1m[36mCart Update (8.9ms)[0m  [1m[33mUPDATE "carts" SET "order_status" = $1, "updated_at" = $2 WHERE "carts"."id" = $3[0m  [["order_status", 3], ["updated_at", "2020-05-08 09:58:58.460142"], ["id", 2]]
+  ↳ app/controllers/api/carts_controller.rb:27
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/carts_controller.rb:27
+Completed 500 Internal Server Error in 130ms (Views: 1.1ms | ActiveRecord: 48.9ms)
+
+
+Started PATCH "/api/restaurant/13/cart/2/cart_status?order_status=order_accepted" for ::1 at 2020-05-08 02:59:09 -0700
+Processing by Api::CartsController#update_cart_status as JSON
+  Parameters: {"order_status"=>"order_accepted", "id"=>"13", "cart_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mCart Load (10.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/carts_controller.rb:25
+Completed 422 Unprocessable Entity in 16ms (Views: 0.4ms | ActiveRecord: 11.3ms)
+
+

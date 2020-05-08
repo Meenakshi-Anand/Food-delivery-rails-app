@@ -9,6 +9,19 @@ class Api::OrdersController < ApplicationController
       end
     else
       render json: ["Not authorized to place order"], status:422
-    end 
+    end
+  end
+
+  def update_order_status
+    if current_user.entity_type == "Restaurant"
+    @order = Order.find(params[:order_id])
+    if @order && @order.status != "delivered"
+      p @order,params[:status]
+      @order.update(status: params[:status])
+      render json: @order , status: 500
+    else
+      render json: @order.errors.full_messages, status: 422
+    end
+   end
   end
 end
