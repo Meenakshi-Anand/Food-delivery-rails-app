@@ -1,5 +1,8 @@
 class Api::UsersController < ApplicationController
   skip_before_action :authenticate
+  
+  def index
+  end
 
   def create
    @entity = params[:entity_type] == "Restaurant" ? Restaurant.new : Consumer.new
@@ -51,7 +54,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  
+
   def address_params
     params.permit(:line1,:line2,:city,:state,:country,:zipcode)
   end
