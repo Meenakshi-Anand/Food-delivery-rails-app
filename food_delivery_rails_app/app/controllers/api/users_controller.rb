@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   skip_before_action :authenticate
-  
+
   def index
   end
 
@@ -54,6 +54,14 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def get_delivering_restaurants
+    @restaurants = current_user.get_all_restaurants
+    if @restaurants
+      render json: @restaurants
+    else
+      render json: @item.errors.full_messages, status: 422
+    end
+  end
 
   def address_params
     params.permit(:line1,:line2,:city,:state,:country,:zipcode)

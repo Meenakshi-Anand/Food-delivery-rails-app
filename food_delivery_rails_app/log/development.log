@@ -4584,3 +4584,1292 @@ Processing by Api::RestaurantsController#set_menu as JSON
 Completed 422 Unprocessable Entity in 106ms (Views: 0.8ms | ActiveRecord: 38.9ms)
 
 
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8004222036087932970)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddLatitudeAndLongitudeToAddress (20200508050548)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.0ms)[0m  [1m[35mALTER TABLE "addresses" ADD "latitude" float[0m
+  ↳ db/migrate/20200508050548_add_latitude_and_longitude_to_address.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "addresses" ADD "longitude" float[0m
+  ↳ db/migrate/20200508050548_add_latitude_and_longitude_to_address.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200508050548"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8004222036087932970)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mAddress Load (8.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (4.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (5.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (5.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (3.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (5.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (3.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (2.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Update (7.6ms)[0m  [1m[33mUPDATE "addresses" SET "latitude" = $1, "longitude" = $2 WHERE "addresses"."id" = $3[0m  [["latitude", 37.519677], ["longitude", -121.923814], ["id", 6]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Update (1.1ms)[0m  [1m[33mUPDATE "addresses" SET "latitude" = $1, "longitude" = $2 WHERE "addresses"."id" = $3[0m  [["latitude", 37.5148444], ["longitude", -121.9131761], ["id", 7]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Update (0.8ms)[0m  [1m[33mUPDATE "addresses" SET "latitude" = $1, "longitude" = $2 WHERE "addresses"."id" = $3[0m  [["latitude", 37.519677], ["longitude", -121.923814], ["id", 8]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Update (0.7ms)[0m  [1m[33mUPDATE "addresses" SET "latitude" = $1, "longitude" = $2 WHERE "addresses"."id" = $3[0m  [["latitude", 37.519677], ["longitude", -121.923814], ["id", 9]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Update (0.8ms)[0m  [1m[33mUPDATE "addresses" SET "latitude" = $1, "longitude" = $2 WHERE "addresses"."id" = $3[0m  [["latitude", 37.519677], ["longitude", -121.923814], ["id", 10]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (3.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (6.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mAddress Load (3.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[36mAddress Load (6.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE (addresses.latitude IS NULL OR addresses.longitude IS NULL) ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (8.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAddress Create (27.0ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "778,PraderiaCir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 9], ["latitude", 37.519677], ["longitude", -121.923814]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAddress Create (0.8ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "798 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 10], ["latitude", 37.519546], ["longitude", -121.923329]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAddress Create (6.9ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "798 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 10], ["latitude", 37.519546], ["longitude", -121.923329]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAddress Load (6.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Destroy (12.0ms)[0m  [1m[31mDELETE FROM "addresses"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAddress Create (6.9ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "778 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 9], ["latitude", 37.519677], ["longitude", -121.923814]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAddress Create (2.7ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "798 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 10], ["latitude", 37.519546], ["longitude", -121.923329]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAddress Create (0.7ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "774 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 11], ["latitude", 37.519682], ["longitude", -121.923911]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (8.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAddress Create (7.8ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["line1", "760 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 12]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT addresses.*, NULL::text AS distance, NULL::text AS bearing FROM "addresses" WHERE (false)[0m
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (38.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAddress Create (10.5ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "760 Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 12], ["latitude", 37.5196733], ["longitude", -121.9239118]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAddress Load (35.5ms)[0m  [1m[34mSELECT addresses.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196733 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196733 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239118 - addresses.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((addresses.longitude - -121.9239118) / 57.2957795), ((addresses.latitude - 37.5196733) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "addresses" WHERE (addresses.latitude BETWEEN 37.070012497040636 AND 37.969334102959365 AND addresses.longitude BETWEEN -122.49084624276296 AND -121.35697735723704 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196733 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196733 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239118 - addresses.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 50 AND addresses.id != 18) ORDER BY distance ASC[0m
+  [1m[36mAddress Load (87.1ms)[0m  [1m[34mSELECT addresses.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196733 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196733 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239118 - addresses.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((addresses.longitude - -121.9239118) / 57.2957795), ((addresses.latitude - 37.5196733) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "addresses" WHERE (addresses.latitude BETWEEN 37.474707219704065 AND 37.56463938029594 AND addresses.longitude BETWEEN -121.98060524427629 AND -121.86721835572371 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((37.5196733 - addresses.latitude) * PI() / 180 / 2), 2) + COS(37.5196733 * PI() / 180) * COS(addresses.latitude * PI() / 180) * POWER(SIN((-121.9239118 - addresses.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 5 AND addresses.id != 18) ORDER BY distance ASC[0m
+  [1m[36mUser Load (23.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."entity_type" = $1[0m  [["entity_type", "Restaurant"]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 11]]
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (6.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (1.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 12], ["LIMIT", 1]]
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "users" ON "addresses"."user_id" = "users"."id" WHERE "users"."entity_id" = $1 AND "users"."entity_type" = $2 LIMIT $3[0m  [["entity_id", 9], ["entity_type", "Restaurant"], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (9.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "users" ON "addresses"."user_id" = "users"."id" WHERE "users"."entity_id" = $1 AND "users"."entity_type" = $2 LIMIT $3[0m  [["entity_id", 14], ["entity_type", "Restaurant"], ["LIMIT", 1]]
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "users" ON "addresses"."user_id" = "users"."id" WHERE "users"."entity_id" = $1 AND "users"."entity_type" = $2 LIMIT $3[0m  [["entity_id", 13], ["entity_type", "Restaurant"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Destroy (8.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mAddress Destroy (3.2ms)[0m  [1m[31mDELETE FROM "addresses"[0m
+Started POST "/api/user?name=Abhi&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:29:11 -0700
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError - uninitialized constant Api::UserController:
+
+Started POST "/api/user?name=Abhi&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:29:44 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Abhi", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (8.4ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "veena@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (0.8ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Abhi"], ["email", "veena@codeanand.com"], ["password_digest", "$2a$12$/oVwI9P9EVUMTgUvQyzoze9UIErCF1g4.8BJC2iVUB2UovVIvJcsK"], ["entity_type", "Consumer"], ["entity_id", 19], ["created_at", "2020-05-08 07:29:45.284482"], ["updated_at", "2020-05-08 07:29:45.284482"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Completed 500 Internal Server Error in 650ms (ActiveRecord: 90.2ms)
+
+
+
+NoMethodError - undefined method `geocoded_by' for #<Class:0x00007fc1b9a2ec48>:
+  app/models/address.rb:4:in `<class:Address>'
+  app/models/address.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:13:in `create'
+
+Started POST "/api/user?name=Abhi&email=veena@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:30:28 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Abhi", "email"=>"veena@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (1.0ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "veena@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Completed 422 Unprocessable Entity in 430ms (ActiveRecord: 7.6ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email has already been taken:
+  app/controllers/api/users_controller.rb:12:in `create'
+
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (3.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/user?name=Abhi&email=abhi@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:31:28 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Abhi", "email"=>"abhi@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (0.6ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (0.4ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Abhi"], ["email", "abhi@codeanand.com"], ["password_digest", "$2a$12$B3kgluB4Cud4OjJdtDocRecF9U9YYaHu1sIr02gwnyTZSxz/jjLEq"], ["entity_type", "Consumer"], ["entity_id", 21], ["created_at", "2020-05-08 07:31:29.441352"], ["updated_at", "2020-05-08 07:31:29.441352"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Completed 500 Internal Server Error in 507ms (ActiveRecord: 11.1ms)
+
+
+
+NoMethodError - undefined method `geocoded_by' for #<Class:0x00007fc1b9771230>:
+  app/models/address.rb:4:in `<class:Address>'
+  app/models/address.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:13:in `create'
+
+Started POST "/api/user?name=Abhi&email=abhi@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:34:12 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Abhi", "email"=>"abhi@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (7.9ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (0.5ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Completed 422 Unprocessable Entity in 584ms (ActiveRecord: 96.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email has already been taken:
+  app/controllers/api/users_controller.rb:12:in `create'
+
+  [1m[36mAddress Load (3.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  [1m[36mUser Destroy (3.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started POST "/api/user?name=Abhi&email=abhi@codeanand.com&password=[FILTERED]&entity_type=Consumer&line1=778,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:35:48 -0700
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Abhi", "email"=>"abhi@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Consumer", "line1"=>"778,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mConsumer Create (2.1ms)[0m  [1m[32mINSERT INTO "consumers" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mConsumer Load (0.8ms)[0m  [1m[34mSELECT  "consumers".* FROM "consumers" WHERE "consumers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Abhi"], ["email", "abhi@codeanand.com"], ["password_digest", "$2a$12$hwDGJXkN1SfyDrWs.Rx/8OJyGZXgzne24XYCDVUVK/VQ0.xZiOPdy"], ["entity_type", "Consumer"], ["entity_id", 23], ["created_at", "2020-05-08 07:35:49.127440"], ["updated_at", "2020-05-08 07:35:49.127440"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (2.2ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "778,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 15], ["latitude", 37.519677], ["longitude", -121.923814]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 1437ms (Views: 53.2ms | ActiveRecord: 36.9ms)
+
+
+Started POST "/api/user?name=Meenakshi&email=abhi+1@codeanand.com&password=[FILTERED]&entity_type=Restaurant&line1=779,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:36:37 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Meenakshi", "email"=>"abhi 1@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Restaurant", "line1"=>"779,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mRestaurant Create (4.8ms)[0m  [1m[32mINSERT INTO "restaurants" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi 1@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mRestaurant Load (8.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Meenakshi"], ["email", "abhi 1@codeanand.com"], ["password_digest", "$2a$12$pAPI2BQNHjEm8gkgoRi7beFLJVGPs2N46J97C0lCnuhKUoDCSnuDK"], ["entity_type", "Restaurant"], ["entity_id", 15], ["created_at", "2020-05-08 07:36:37.731981"], ["updated_at", "2020-05-08 07:36:37.731981"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (0.8ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "779,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 16], ["latitude", 37.51929519999999], ["longitude", -121.9241251]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 873ms (Views: 4.5ms | ActiveRecord: 36.5ms)
+
+
+Started POST "/api/user?name=Anand&email=anand@codeanand.com&password=[FILTERED]&entity_type=Restaurant&line1=798,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:37:05 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Anand", "email"=>"anand@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Restaurant", "line1"=>"798,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mRestaurant Create (4.8ms)[0m  [1m[32mINSERT INTO "restaurants" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anand@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Anand"], ["email", "anand@codeanand.com"], ["password_digest", "$2a$12$Qkd723X6NQvWrthlB3qUyOLSmM9F.dLuin0U.Mihr2koc8I5.aDrG"], ["entity_type", "Restaurant"], ["entity_id", 16], ["created_at", "2020-05-08 07:37:05.790804"], ["updated_at", "2020-05-08 07:37:05.790804"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (1.0ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "798,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 17], ["latitude", 37.519546], ["longitude", -121.923329]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 1043ms (Views: 5.1ms | ActiveRecord: 30.6ms)
+
+
+Started POST "/api/user?name=Smriti&email=smriti@codeanand.com&password=[FILTERED]&entity_type=Restaurant&line1=774,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:37:39 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Smriti", "email"=>"smriti@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Restaurant", "line1"=>"774,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smriti@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Smriti"], ["email", "smriti@codeanand.com"], ["password_digest", "$2a$12$Te/eICoeXMqDY.t0WydHNuWjOqeF1JdAabdY6dnWxaXoipHkQA7.G"], ["entity_type", "Restaurant"], ["entity_id", 17], ["created_at", "2020-05-08 07:37:39.867286"], ["updated_at", "2020-05-08 07:37:39.867286"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (1.0ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "774,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 18], ["latitude", 37.519682], ["longitude", -121.923911]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 941ms (Views: 6.0ms | ActiveRecord: 20.7ms)
+
+
+Started POST "/api/user?name=Shivani&email=shivani@codeanand.com&password=[FILTERED]&entity_type=Restaurant&line1=756,Praderia%20Cir&city=Fremont&state=CA&country=USA&zipcode=94539&contact_no=4159102486" for ::1 at 2020-05-08 00:38:04 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"name"=>"Shivani", "email"=>"shivani@codeanand.com", "password"=>"[FILTERED]", "entity_type"=>"Restaurant", "line1"=>"756,Praderia Cir", "city"=>"Fremont", "state"=>"CA", "country"=>"USA", "zipcode"=>"94539", "contact_no"=>"4159102486"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+Unpermitted parameters: :line1, :city, :state, :country, :zipcode, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivani@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "entity_type", "entity_id", "created_at", "updated_at", "contact_no") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Shivani"], ["email", "shivani@codeanand.com"], ["password_digest", "$2a$12$7CrCJiQNljSwe5A4JmTmEOkZPGgKJggpkP2Rhlv2Gn5kt5.i1hY.e"], ["entity_type", "Restaurant"], ["entity_id", 18], ["created_at", "2020-05-08 07:38:04.483507"], ["updated_at", "2020-05-08 07:38:04.483507"], ["contact_no", 4159102486]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Unpermitted parameters: :name, :email, :password, :entity_type, :contact_no, :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[36mAddress Create (1.4ms)[0m  [1m[32mINSERT INTO "addresses" ("line1", "city", "state", "country", "zipcode", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["line1", "756,Praderia Cir"], ["city", "Fremont"], ["state", "CA"], ["country", "USA"], ["zipcode", 94539], ["user_id", 19], ["latitude", 37.5196975], ["longitude", -121.9239206]]
+  ↳ app/controllers/api/users_controller.rb:15
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:15
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 904ms (Views: 3.2ms | ActiveRecord: 14.4ms)
+
+
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 15], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+Started POST "/api/session?email=shivani@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 00:58:44 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"shivani@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shivani@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.1ms)
+Completed 200 OK in 515ms (Views: 18.6ms | ActiveRecord: 40.8ms)
+
+
+Started POST "/api/restaurant/update_delivery_range" for ::1 at 2020-05-08 01:00:46 -0700
+Processing by Api::RestaurantsController#update_delivery_range as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:5
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+Completed 200 OK in 101ms (Views: 1.3ms | ActiveRecord: 23.3ms)
+
+
+Started POST "/api/restaurant/update_delivery_range?delivery_range=10" for ::1 at 2020-05-08 01:01:07 -0700
+Processing by Api::RestaurantsController#update_delivery_range as JSON
+  Parameters: {"delivery_range"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[36mRestaurant Update (17.8ms)[0m  [1m[33mUPDATE "restaurants" SET "delivery_range" = $1 WHERE "restaurants"."id" = $2[0m  [["delivery_range", "10.0"], ["id", 18]]
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+Completed 200 OK in 37ms (Views: 0.4ms | ActiveRecord: 22.0ms)
+
+
+Started POST "/api/session?email=smriti@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:01:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"smriti@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smriti@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.3ms)
+Completed 200 OK in 406ms (Views: 12.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/restaurant/update_delivery_range?delivery_range=10" for ::1 at 2020-05-08 01:02:01 -0700
+Processing by Api::RestaurantsController#update_delivery_range as JSON
+  Parameters: {"delivery_range"=>"10"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[36mRestaurant Update (1.2ms)[0m  [1m[33mUPDATE "restaurants" SET "delivery_range" = $1 WHERE "restaurants"."id" = $2[0m  [["delivery_range", "10.0"], ["id", 17]]
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/api/session?email=meenakshi@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:02:28 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"meenakshi@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meenakshi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `authenticate' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/session?email=meenakshi@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:02:57 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"meenakshi@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meenakshi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 21.7ms)
+
+
+
+NoMethodError - undefined method `authenticate' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/session?email=abhi+1@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:03:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"abhi 1@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi 1@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.9ms)
+Completed 200 OK in 429ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/restaurant/update_delivery_range?delivery_range=10" for ::1 at 2020-05-08 01:03:54 -0700
+Processing by Api::RestaurantsController#update_delivery_range as JSON
+  Parameters: {"delivery_range"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mRestaurant Load (8.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:5
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[36mRestaurant Update (0.8ms)[0m  [1m[33mUPDATE "restaurants" SET "delivery_range" = $1 WHERE "restaurants"."id" = $2[0m  [["delivery_range", "10.0"], ["id", 15]]
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/api/session?email=anand@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:04:15 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"anand@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anand@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (1.1ms)
+Completed 200 OK in 428ms (Views: 4.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/restaurant/update_delivery_range?delivery_range=10" for ::1 at 2020-05-08 01:04:33 -0700
+Processing by Api::RestaurantsController#update_delivery_range as JSON
+  Parameters: {"delivery_range"=>"10"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[36mRestaurant Update (0.9ms)[0m  [1m[33mUPDATE "restaurants" SET "delivery_range" = $1 WHERE "restaurants"."id" = $2[0m  [["delivery_range", "10.0"], ["id", 16]]
+  ↳ app/controllers/api/restaurants_controller.rb:7
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/restaurants_controller.rb:7
+Completed 200 OK in 22ms (Views: 0.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/session?email=anand@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:04:41 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"anand@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anand@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 422 Unprocessable Entity in 414ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/session?email=ananda@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:04:50 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"ananda@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ananda@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `authenticate' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/session?email=ananda@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:05:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"ananda@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ananda@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 13.1ms)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session?email=ananda@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:05:22 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"ananda@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ananda@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session?email=ananda@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:06:22 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"ananda@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ananda@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 500 Internal Server Error in 27ms (Views: 0.2ms | ActiveRecord: 4.8ms)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:12:in `create'
+
+Started POST "/api/session?email=ananda@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:07:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"ananda@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ananda@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+Completed 422 Unprocessable Entity in 17ms (Views: 0.3ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/session?email=abhi@codeanand.com&password=[FILTERED]" for ::1 at 2020-05-08 01:10:10 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"abhi@codeanand.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abhi@codeanand.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:5
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (2.2ms)
+Completed 200 OK in 610ms (Views: 9.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/api/user/delivering_restaurants" for ::1 at 2020-05-08 01:10:43 -0700
+Processing by Api::UsersController#get_delivering_restaurants as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  ↳ app/models/user.rb:11
+  [1m[36mAddress Load (3.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 18.2ms)
+
+
+
+NoMethodError - undefined method `save!' for #<Array:0x00007fe144362fb8>:
+  app/controllers/api/users_controller.rb:59:in `get_delivering_restaurants'
+
+Started GET "/api/user/delivering_restaurants" for ::1 at 2020-05-08 01:11:20 -0700
+Processing by Api::UsersController#get_delivering_restaurants as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  ↳ app/models/user.rb:11
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (1.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (1.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 4.8ms)
+
+
+
+NoMethodError - undefined method `save!' for #<Array:0x00007fe144f256c0>:
+  app/controllers/api/users_controller.rb:59:in `get_delivering_restaurants'
+
+Started GET "/api/user/delivering_restaurants" for ::1 at 2020-05-08 01:11:22 -0700
+Processing by Api::UsersController#get_delivering_restaurants as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  ↳ app/models/user.rb:11
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.4ms)
+
+
+
+NoMethodError - undefined method `save!' for #<Array:0x00007fe1442d80e8>:
+  app/controllers/api/users_controller.rb:59:in `get_delivering_restaurants'
+
+Started GET "/api/user/delivering_restaurants" for ::1 at 2020-05-08 01:12:15 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meenakshianand/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#get_delivering_restaurants as JSON
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  ↳ app/models/user.rb:11
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 26.5ms)
+
+
+
+NoMethodError - undefined method `save!' for #<Array:0x00007f835c9db868>:
+  app/controllers/api/users_controller.rb:59:in `get_delivering_restaurants'
+
+Started GET "/api/user/delivering_restaurants" for ::1 at 2020-05-08 01:12:35 -0700
+Processing by Api::UsersController#get_delivering_restaurants as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."entity_type" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["entity_type", "Restaurant"], ["LIMIT", 1000]]
+  ↳ app/models/user.rb:11
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 75ms (Views: 0.9ms | ActiveRecord: 22.1ms)
+
+

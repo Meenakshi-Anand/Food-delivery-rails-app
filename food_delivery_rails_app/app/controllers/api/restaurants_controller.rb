@@ -1,6 +1,19 @@
 class Api::RestaurantsController < ApplicationController
   skip_before_action :authenticate
 
+  def update_delivery_range
+   @restaurant = Restaurant.find(current_user.entity_id)
+   if @restaurant
+     if @restaurant.update(delivery_range: params[:delivery_range])
+       render json: @restaurant
+     else
+       render json: @restaurant.errors, status: 400
+     end
+   else
+     render json: ["No restaurant found"], status: 404
+   end
+  end
+
   def get_menu
     @restaurant = Restaurant.find(params[:id])
     if @restaurant
@@ -33,10 +46,6 @@ class Api::RestaurantsController < ApplicationController
      else
         render json: ["Not authorized to set menu for this restaurant"], status: 422
      end
-  end
-
-  def cart_params
-     params.permit(*args)
   end
 
 end

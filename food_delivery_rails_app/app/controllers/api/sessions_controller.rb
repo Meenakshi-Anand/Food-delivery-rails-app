@@ -4,11 +4,11 @@ class Api::SessionsController < ApplicationController
     def create
       @user = User.find_by(email: params[:email])
 
-      if @user.authenticate(params[:password])
+      if @user && @user.authenticate(params[:password])
          @jwt = Auth.issue({user: @user.id})
         render :show
       else
-        render json: @user.errors.full_messages, status: 422
+        render json: ["Invalid Username or Password"], status: 422
       end
     end
 
