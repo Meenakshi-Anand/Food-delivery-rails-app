@@ -1,11 +1,5 @@
 class Address < ActiveRecord::Base
 
-  # geocode with a method
-  geocoded_by :full_street_address
-
-  # the callback to set longitude and latitude
-  after_validation :geocode
-
   validates :line1, :city, :state, :country, :zipcode, presence: true
 
   belongs_to :user

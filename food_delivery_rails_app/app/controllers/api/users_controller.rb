@@ -13,6 +13,7 @@ class Api::UsersController < ApplicationController
      @address = Address.new(address_params)
      @address.user_id = @user.id
      if @address.save
+       AddressWorker.perform_async(@address.id) 
        render :show
      else
        render json: @address.errors.full_messages, status: 422
