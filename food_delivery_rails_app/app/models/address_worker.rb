@@ -4,9 +4,12 @@ class AddressWorker < ApplicationRecord
 
   def perform(address_id)
     address = Address.find(address_id)
-    coordinates = Geocoder.coordinates(address.zipcode)
-    address.latitude = coordinates[0]
-    address.longitude = coordinates[1]
+    uri = URI('https://maps.googleapis.com/maps/api/geocode/json?address='+address.full_street_address+'&key='+ENV["API_KEY"])
+    response = Net::HTTP.get_response(uri)
+    response = JSON.parse(response.body)
+    address.latitude = response["results"][0]["geometry"]["location"]["lat"]
+    address.longitude = response["results"][0]["geometry"]["location"]["lng"]
     address.save!
   end
+  
 end
