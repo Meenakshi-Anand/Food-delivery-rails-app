@@ -18583,3 +18583,27 @@ Completed 200 OK in 40ms (Views: 5.4ms | ActiveRecord: 5.8ms)
   ↳ app/models/address_worker.rb:6
   [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
   ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 259], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 319], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 324], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 303], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 230], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (2.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 220], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 232], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 347], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = $1 LIMIT $2[0m  [["id", 216], ["LIMIT", 1]]
+  ↳ app/models/address_worker.rb:6
