@@ -9,12 +9,12 @@ class Api::UsersController < ApplicationController
    @entity.save!
    @user = User.new(user_params)
    @user.entity_id = @entity.id
-   if @user.save!
+   if @user.save
      @address = Address.new(address_params)
      @address.user_id = @user.id
      if @address.save
-       AddressWorker.perform_async(@address.id) 
-       render :show
+       AddressWorker.perform_async(@address.id)
+       render json: @user
      else
        render json: @address.errors.full_messages, status: 422
      end

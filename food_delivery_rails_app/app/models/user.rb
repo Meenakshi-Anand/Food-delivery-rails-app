@@ -26,6 +26,7 @@ class User < ApplicationRecord
     result
   end
 
+  # calculate distance using haversines formula
   def dist (loc1,loc2)
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
