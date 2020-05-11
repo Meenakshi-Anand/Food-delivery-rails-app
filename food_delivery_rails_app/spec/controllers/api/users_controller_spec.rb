@@ -25,7 +25,7 @@ RSpec.describe Api::UsersController, type: :controller do
       end
     end
 
-    context "with invalid attributes" do
+    context "with invalid password" do
       before do
         @count = User.count
         @user = {

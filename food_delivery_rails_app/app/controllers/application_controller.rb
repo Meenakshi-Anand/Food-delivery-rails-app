@@ -35,8 +35,4 @@ class ApplicationController < ActionController::API
    .scan(/Bearer/).flatten.first
  end
 
- def logout
-   @current_user = nil
- end
-
  end

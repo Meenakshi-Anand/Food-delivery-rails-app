@@ -6,19 +6,9 @@ class Api::SessionsController < ApplicationController
 
       if @user && @user.authenticate(params[:password])
          @jwt = Auth.issue({user: @user.id})
-        render :show
+        render json: { user: @user, jwt: @jwt }
       else
         render json: ["Invalid Username or Password"], status: 422
       end
     end
-
-    def destroy
-      if current_user
-        logout
-        render json: ["Logged out successfully"], status:500
-      else
-        render json: ["Your not logged in"], status: 404
-      end
-    end
-
 end

@@ -1,9 +1,6 @@
 class Api::UsersController < ApplicationController
   skip_before_action :authenticate
 
-  def index
-  end
-
   def create
    @entity = params[:entity_type] == "Restaurant" ? Restaurant.new : Consumer.new
    @entity.save!
@@ -56,7 +53,7 @@ class Api::UsersController < ApplicationController
   end
 
   def get_delivering_restaurants
-    @restaurants = current_user.get_all_restaurants
+    @restaurants = current_user.get_delivering_restaurants
     if @restaurants
       render json: @restaurants
     else

@@ -11,5 +11,5 @@ class AddressWorker < ApplicationRecord
     address.longitude = response["results"][0]["geometry"]["location"]["lng"]
     address.save!
   end
-  
+
 end

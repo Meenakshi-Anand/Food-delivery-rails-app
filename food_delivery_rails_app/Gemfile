@@ -32,7 +32,6 @@ gem 'better_errors'
 gem 'annotate'
 gem 'jwt'
 gem 'figaro'
-gem 'geocoder'
 gem 'sidekiq'
 
 # Use ActiveStorage variant
