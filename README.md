@@ -1,6 +1,4 @@
 # Food Delivery
-[Live]()
-[Design Documentation](https://github.com/Meenakshi-Anand/Restaurants-Near-Me/wiki)
 
 Food Delivery is a full-stack web application built upon a Rails framework, using PostgreSQL database and React for the rendering of frontend components, with Redux being used for state management.
 
